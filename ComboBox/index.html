@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <link rel="stylesheet" href="css/foundation.min.css">
+     <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+ </head>
+ <body ng-app="app">
+
+
+		<div ng-controller="Ctrl">
+                <select ng-model="selCountry" ng-options="country.name for country in countries" ng-change="fCity()">
+                </select>
+            <br>
+
+            <!--<select  ng-model="selCity" ng-options="c.name for c in aCities">
+            </select>-->
+            <!--Mejor esta opción porque no tiene sentido modelar el segundo combo-->
+            <select>
+                <option ng-repeat="c in aCities">{{c.name}}</option>
+            </select>
+
+
+		</div>
+
+
+
+</body>
+</html>

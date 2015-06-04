@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <link rel="stylesheet" href="css/foundation.min.css">
+     <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+ </head>
+ <body ng-app="app">
+
+
+		<div ng-controller="Ctrl">
+			<select ng-model="myColor" ng-options="color.name for color in colors"></select>
+				<h1>selected_color: {{myColor}} 	</h1>
+		</div>
+
+
+
+</body>
+</html>

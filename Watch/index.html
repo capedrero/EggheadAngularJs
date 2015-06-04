@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <link rel="stylesheet" href="css/foundation.min.css">
+     <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+ </head>
+ <body ng-app="app">
+
+
+ <div ng-controller="CartController">
+     <div ng-repeat="item in items">
+         <span>{{item.title}}</span>
+         <input ng-model="item.quantity">
+         <span>{{item.price | currency}}</span>
+         <span>{{item.price * item.quantity | currency}}</span>
+     </div>
+     <div>Total: {{totalCart() | currency}}</div>
+     <div>Discount: {{bill.discount | currency}}</div>
+     <!--No sabes que valor tiene en esa iteración el modelo de inputs-->
+     <div>Subtotal: {{subTotal() | currency}}</div>
+ </div>
+
+
+ </body>
+</html>

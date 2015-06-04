@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <link rel="stylesheet" href="css/foundation.min.css">
+     <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+ </head>
+ <body>
+
+	<div ng-app="">
+	<!-- CPF este elemento arranca el scope hacia abajo 
+	esto hace que compartan la misma variable data.message por la notación punto
+	si eliminamos el input cada controlador tiene su scope y no se comparte esa variable.
+	Así mismo, si creamos una variable sin notación punto, tampoco se comparte el scope y cada modelo tendría
+	su variable en su ambito.-->
+	
+		<input type="text" ng-model="data.message">
+		<h1>{{ data.message }}</h1>
+
+		<div ng-controller="FirstCtrl">
+			<input type="text" ng-model="data.message">
+			<h1>{{ data.message }}</h1>
+		</div>
+
+		<div ng-controller="SecondCtrl">
+			<input type="text" ng-model="data.message">
+			<h1>{{ data.message }}</h1>
+		</div>
+	</div>
+
+
+</body>
+</html>
